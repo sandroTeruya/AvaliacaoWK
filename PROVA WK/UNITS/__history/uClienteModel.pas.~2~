@@ -1,0 +1,86 @@
+unit uClienteModel;
+
+interface
+
+uses uControle;
+
+type
+  Tcliente = class
+    private
+      Fcontrole : TControle;
+
+      Fcodigo: Integer;
+      Fnome:   string;
+      Fcidade: string;
+      Fuf:     string;
+
+    public
+      constructor Create(pConexaoControle:TControle);
+      destructor Destroy; override;
+
+      property codigo: Integer read Fcodigo;
+      property nome:   string  read Fnome;
+      property cidade: string  read Fcidade;
+      property uf:     string  read Fuf;
+
+      function getCodigo  () : Integer;
+      function getnome    () : string;
+      function getcidade  () : string;
+      function getuf      () : string;
+
+      function pesquisaCliente (pCodigo:string):Tcliente;
+  end;
+
+implementation
+
+{ Tcliente }
+
+
+
+constructor Tcliente.Create(pConexaoControle: TControle);
+begin
+  Fcontrole := pConexaoControle;
+end;
+
+destructor Tcliente.Destroy;
+begin
+
+  inherited;
+end;
+
+function Tcliente.getcidade: string;
+begin
+  result := Fcidade
+end;
+
+function Tcliente.getCodigo: Integer;
+begin
+  result := Fcodigo;
+end;
+
+function Tcliente.getnome: string;
+begin
+  result := Fnome;
+end;
+
+function Tcliente.getuf: string;
+begin
+  result := Fuf;
+end;
+
+
+function Tcliente.pesquisaCliente(pCodigo: string): Tcliente;
+begin
+  Fcontrole.SqqGeral.Close;
+  Fcontrole.SqqGeral.SQL.Clear;
+  Fcontrole.SqqGeral.SQL.text := 'select * from cliente ';
+  Fcontrole.SqqGeral.open;
+
+  fnome   :=Fcontrole.SqqGeral.fieldbyname('nome').asstring;
+  fcidade :=Fcontrole.SqqGeral.fieldbyname('cidade').asstring;
+  fuf     :=Fcontrole.SqqGeral.fieldbyname('uf').asstring;
+end;
+
+
+
+end.

@@ -1,0 +1,65 @@
+unit uControleCliente;
+
+interface
+
+uses
+   Windows, Messages, SysUtils, Classes,  Controls, Forms, Dialogs,
+   Variants, Contnrs,  DBXFirebird, SqlExpr,  StrUtils, inifiles,
+   uConexao,Data.Win.ADODB,uControle,uClienteModel;
+ type
+
+ TControleCliente = class
+
+ private
+   FConexao  : TConexaoBanco;
+   FSqqGeral : TADOQuery;
+
+   Fcontrole : TControle;
+
+ public
+   constructor Create(pConexaoControle: TControle);
+   destructor  Destroy; override;
+   property SqqGeral : TADOQuery read FSqqGeral write FSqqGeral;
+
+   function pesquisaCliente (pCodigo:integer):Tcliente;
+
+ end;
+implementation
+
+{ TControleCliente }
+
+
+constructor TControleCliente.Create(pConexaoControle: TControle);
+begin
+  Fcontrole := pConexaoControle;
+end;
+
+destructor TControleCliente.Destroy;
+begin
+
+
+end;
+
+function TControleCliente.pesquisaCliente(pCodigo: integer): Tcliente;
+var
+  cliente : Tcliente;
+  FConexao  : tcontrole;
+begin
+
+
+  Fcontrole.SqqGeral.Close;
+  Fcontrole.SqqGeral.SQL.Clear;
+  Fcontrole.SqqGeral.SQL.text := 'select * from cliente ';
+  Fcontrole.SqqGeral.open;
+  //Fcontrole.SqqGeral.fieldbyname('nome').asstring;
+
+
+  cliente.setcidade(Fcontrole.SqqGeral.fieldbyname('cidade').asstring);
+  cliente.setuf(Fcontrole.SqqGeral.fieldbyname('uf').asstring);
+  cliente.setcodigo(Fcontrole.SqqGeral.fieldbyname('codigo').asinteger);
+  cliente.setnome(Fcontrole.SqqGeral.fieldbyname('nome').asstring);
+  result := cliente;
+
+end;
+
+end.
