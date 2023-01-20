@@ -1,0 +1,108 @@
+unit uDadosGeraisModel;
+
+interface
+
+uses uControleDadosGerais, uControle;
+
+type
+  TDadosGerais = class
+    private
+      FNumeroPedido : Integer;
+      FDataEmissao  : date;
+      FCodigoCliente: Integer;
+      FValorTotal   : float;
+
+      FControleDadosGerais  : TControleDadosGerais;
+
+      function getnumeroPedido  () : Integer;
+      function getdataEmissao   () : date;
+      function getcodigoCliente () : Integer;
+      function getvalorTotal    () : float;
+
+      procedure setnumeroPedido (numeroPedido   : Integer);
+      procedure setdataEmissao  (dataEmissao    : date);
+      procedure setcodigoCliente(codigoCliente  : Integer);
+      procedure setvalorTotal   (valorTotal     : float);
+
+    public
+      constructor Create();
+      destructor Destroy; override;
+
+      property numeroPedido  : Integer read FNumeroPedido  write setnumeroPedido;
+      property dataEmissao   : date    read FDataEmissao   write setdataEmissao;
+      property codigoCliente : Integer read FCodigoCliente write setcodigoCliente;
+      property valorTotal    : float   read FValorTotal    write setvalorTotal;
+
+      function pesquisaDadosGerais(pnumeroPedido:Integer; dadosGerais:TDadosGerais):TDadosGerais;
+  end;
+
+implementation
+
+{ TDadosGerais }
+constructor TDadosGerais.Create();
+begin
+  FControleDadosGerais  := TControleDadosGerais.Create();
+end;
+
+destructor TDadosGerais.Destroy;
+begin
+  inherited;
+end;
+
+function TDadosGerais.getnumeroPedido: Integer;
+begin
+  result := FNumeroPedido;
+end;
+
+function TDadosGerais.getdataEmissao: date;
+begin
+  result := FDataEmissao;
+end;
+
+function TDadosGerais.getcodigoCliente: Integer;
+begin
+  result := FCodigoCliente;
+end;
+
+function TDadosGerais.getvalorTotal: float;
+begin
+  result := FValorTotal;
+end;
+
+procedure TDadosGerais.setnumeroPedido(numeroPedido: Integer);
+begin
+  FNumeroPedido := numeroPedido;
+end;
+
+procedure TDadosGerais.setdataEmissao(dataEmissao: date);
+begin
+  FDataEmissao := dataEmissao;
+end;
+
+procedure TDadosGerais.setcodigoCliente(codigoCliente: Integer);
+begin
+  FCodigoCliente := codigoCliente;
+end;
+
+procedure TDadosGerais.setvalorTotal(valorTotal: float);
+begin
+  FValorTotal := valorTotal;
+end;
+
+
+function TDadosGerais.pesquisaDadosGerais(pnumeroPedido: Integer;
+  dadosGerais: TDadosGerais): TDadosGerais;
+var Fcontrole : TControle;
+begin
+  FControle := FControleDadosGerais.pesquisaDadosGerais(pCodigo);
+
+  dadosGerais.numeroPedido := Fcontrole.SqqGeral.FieldByName('numero_pedido').AsInteger;
+  dadosGerais.dataEmissao  := Fcontrole.SqqGeral.FieldByName('dataEmissao').AsDate;
+  dadosGerais.codigoCliente:= Fcontrole.SqqGeral.FieldByName('codigoCliente').AsInteger;
+  dadosGerais.valorTotal   := Fcontrole.SqqGeral.FieldByName('valorTotal').AsFloat;
+
+  Result := dadosGerais;
+end;
+
+end.
+

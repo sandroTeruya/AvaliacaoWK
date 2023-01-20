@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/15 16:03:32.000.466,=C:\Users\sandr\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/15 16:15:25.000.590,C:\Users\sandr\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\sandr\Desktop\PROVA WK\UNITS\uFrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/15 16:15:25.000.590,C:\Users\sandr\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\sandr\Desktop\PROVA WK\UNITS\uFrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/15 16:15:33.000.150,C:\Users\sandr\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\sandr\Desktop\PROVA WK\UNITS\ProvaWK.dproj</Transaction>
+    <Transaction>2023/01/15 16:24:00.000.989,=C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas</Transaction>
+    <Transaction>2023/01/15 16:24:23.000.261,C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas=C:\Users\sandr\Desktop\PROVA WK\UNITS\uClienteModel.pas</Transaction>
+    <Transaction>2023/01/15 17:23:44.000.555,=C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas</Transaction>
+    <Transaction>2023/01/15 17:23:57.000.309,C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas=C:\Users\sandr\Desktop\PROVA WK\UNITS\uControle.pas</Transaction>
+    <Transaction>2023/01/15 17:24:29.000.377,=C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas</Transaction>
+    <Transaction>2023/01/15 17:24:34.000.701,C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas=C:\Users\sandr\Desktop\PROVA WK\UNITS\uConexao.pas</Transaction>
+    <Transaction>2023/01/15 18:32:20.000.788,=C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas</Transaction>
+    <Transaction>2023/01/15 18:32:29.000.852,C:\Users\sandr\Desktop\PROVA WK\UNITS\Unit1.pas=C:\Users\sandr\Desktop\PROVA WK\UNITS\uControleCliente.pas</Transaction>
+    <Transaction>2023/01/17 20:16:17.000.909,C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\uClienteModel.pas=</Transaction>
+    <Transaction>2023/01/17 20:16:17.000.906,C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\uConexao.pas=</Transaction>
+    <Transaction>2023/01/17 20:16:17.000.904,C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\uControle.pas=</Transaction>
+    <Transaction>2023/01/17 20:16:17.000.887,C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\uControleCliente.pas=</Transaction>
+    <Transaction>2023/01/17 20:18:52.000.363,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\UNITS\uControle.pas</Transaction>
+    <Transaction>2023/01/17 20:18:52.000.355,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\UNITS\uClienteModel.pas</Transaction>
+    <Transaction>2023/01/17 20:18:52.000.359,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\UNITS\uConexao.pas</Transaction>
+    <Transaction>2023/01/17 20:18:52.000.366,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\UNITS\UNITS\uControleCliente.pas</Transaction>
+    <Transaction>2023/01/17 20:22:38.000.004,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uProdutoModel.pas</Transaction>
+    <Transaction>2023/01/17 20:39:17.000.866,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uControleProduto.pas</Transaction>
+    <Transaction>2023/01/19 21:27:37.000.502,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uControleDadosGerais.pas</Transaction>
+    <Transaction>2023/01/19 21:27:49.000.418,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uDadosGeraisModel.pas</Transaction>
+    <Transaction>2023/01/19 23:57:23.000.361,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uPedidosProdutosModel.pas</Transaction>
+    <Transaction>2023/01/19 23:57:41.000.088,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uControlePedidosProduto.pas</Transaction>
+    <Transaction>2023/01/20 00:01:06.000.665,C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uPedidosProdutosModel.pas=</Transaction>
+    <Transaction>2023/01/20 00:01:14.000.190,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uPedidosProdutoModel.pas</Transaction>
+    <Transaction>2023/01/20 00:05:34.000.150,C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uPedidosProdutoModel.pas=</Transaction>
+    <Transaction>2023/01/20 00:05:40.000.832,=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 00:06:26.000.511,C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\UNITS\uPedidoProdutoModel.pas=C:\Users\sandr\Desktop\PROVA WK\PROVA WK\PROJETO\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

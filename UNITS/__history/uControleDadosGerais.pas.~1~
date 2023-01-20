@@ -1,0 +1,51 @@
+unit uControleDadosGerais;
+
+interface
+
+uses
+   Windows, Messages, SysUtils, Classes,  Controls, Forms, Dialogs,
+   Variants, Contnrs,  SqlExpr,  StrUtils, inifiles,
+   uConexao,Data.Win.ADODB,uControle;
+ type
+ TControleDadosGerais = class
+
+ private
+   FConexao  : TConexaoBanco;
+   FsqlGeral : TADOQuery;
+   FControle : TControle;
+
+ public
+   constructor Create();
+   destructor  Destroy; override;
+
+   property    sqlGeral : TADOQuery read FsqlGeral write FsqlGeral;
+
+   function pesquisaDadosGerais(pnumero_pedido:integer):TControle;
+
+ end;
+implementation
+
+{ TDadosGerais }
+
+
+constructor TControleDadosGerais.Create();
+begin
+  FControle := TControle.Create();
+end;
+
+destructor TControleDadosGerais.Destroy;
+begin
+  FControle.Free
+end;
+
+function TControleDadosGerais.pesquisaDadosGerais(pnumero_pedido: integer):TControle;
+begin
+  Fcontrole.SqqGeral.Close;
+  Fcontrole.SqqGeral.SQL.Clear;
+  Fcontrole.SqqGeral.SQL.text := 'SELECT numero_pedido, dataEmissao, codigoCliente, valorTotal FROM dadosgerais WHERE numero_pedido = ' + inttostr(pnumero_pedido);
+  Fcontrole.SqqGeral.open;
+
+  result := Fcontrole;
+end;
+
+end.

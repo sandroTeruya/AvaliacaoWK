@@ -1,0 +1,51 @@
+unit uControlePedidosProduto;
+
+interface
+
+uses
+   Windows, Messages, SysUtils, Classes,  Controls, Forms, Dialogs,
+   Variants, Contnrs,  SqlExpr,  StrUtils, inifiles,
+   uConexao,Data.Win.ADODB,uControle;
+ type
+ TControlePedidosProduto = class
+
+ private
+   FConexao  : TConexaoBanco;
+   FsqlGeral : TADOQuery;
+   FControle : TControle;
+
+ public
+   constructor Create();
+   destructor  Destroy; override;
+
+   property    sqlGeral : TADOQuery read FsqlGeral write FsqlGeral;
+
+   function pesquisaPedidoProduto(pnumero_pedido:integer):TControle;
+
+ end;
+implementation
+
+{ TControlePedidosProduto }
+
+
+constructor TControlePedidosProduto.Create();
+begin
+  FControle := TControle.Create();
+end;
+
+destructor TControlePedidosProduto.Destroy;
+begin
+  FControle.Free
+end;
+
+function TControlePedidosProduto.pesquisaPedidoProduto(pnumero_pedido: integer):TControle;
+begin
+  Fcontrole.SqqGeral.Close;
+  Fcontrole.SqqGeral.SQL.Clear;
+  Fcontrole.SqqGeral.SQL.text := 'SELECT numero_pedido, codigoProduto, quantidade, valorUnitario, valorTotal FROM PedidoProduto WHERE numero_pedido = ' + inttostr(pnumero_pedido);
+  Fcontrole.SqqGeral.open;
+
+  result := Fcontrole;
+end;
+
+end.
